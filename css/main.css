@@ -194,7 +194,7 @@ body {
 /* header */
 
 div.hero{
-  background-image: url('/img/encabezado.jpg');
+  background-image: url('../img/encabezado.jpg');
   background-position: top center;
   background-size: cover;
   height: 100vh;
@@ -513,7 +513,7 @@ div.invitado:hover p{
   height: auto;
 }
 .contador::before{
-  background-image: url('/img/bg-resumen.jpg');
+  background-image: url('../img/bg-resumen.jpg');
   content: '';
   position: absolute;
 }
