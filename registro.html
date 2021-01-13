@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+
+
+  <header>
+    <div class="hero">
+      <div class="contenedor-header">
+        <nav class="redes-sociales">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </nav>
+        <div class="informacion-evento">
+          <div class="clearfix">
+            <p class="fecha"><i class="far fa-calendar-alt"></i> 10-12 Dic</p>
+            <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Guadalajara, MX</p>
+          </div>
+          <h1 class="nombre-sitio">GdlWebCamp</h1>
+          <p class="slogan">La mejor conferencia de <span>diseño web</span></p>
+        </div>
+      </div> <!--contenido-header-->
+    </div> <!--hero-->
+  </header>
+
+  <div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+          <a href="index.html">
+              <img src="img/logo.svg" alt="Site Logo">
+          </a>
+      </div>
+  
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <nav class="navegacion-principal">
+        <a href="#">Conferencia</a>
+        <a href="#">Invitados</a>
+        <a href="#">Calendario</a>
+        <a href="#">Reservasiones</a>
+      </nav>
+
+    </div> <!--contenedor-->
+  </div>
+
+
+  <section class="seccion contenedor">
+      <h2>Registro de Usuarios</h2>
+      <form id='registro' class="registro" action="#">
+        <div id="datos_usuarios" class="registro caja clearfix">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required placeholder="Nombre">
+            </div>
+            <div class="campo">
+                <label for="nombre">Apellido</label>
+                <input type="text" name="apellido" id="apellido" required placeholder="Apellido">
+            </div>
+            <div class="campo">
+                <label for="nombre">Email</label>
+                <input type="emial" id="email" name="email" required placeholder="Email">
+            </div> 
+            <div id="error"></div>
+        </div><!--datos_usuarios-->
+
+        <div id="paquetes" class="paquetes">
+            <h3>Elige el numero de boletos</h3>
+
+            <div class="lista-precios clearfix">
+                <div class="tarjeta-precio">
+                    <div class="contenido-precio clearfix">
+                        <h3>Pase por d&iacute;a</h3>
+                        <p class="numero">$30</p>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Bocadillos Gratis</li>
+                            <li><i class="fa fa-check"></i> Todas las conferencias</li>
+                            <li><i class="fa fa-check"></i> Todos los Talleres</li>
+                        </ul>
+                        <div class="orden">
+                            <label for="pase_dia">Cantidad</label>
+                            <input type="number" id="pase_dia" placeholder="0" min="0" size="3">
+                        </div> <!--orden-->
+                    </div> <!--contenido precios-->
+                </div><!--tarjeta precio-->
+        
+                <div class="tarjeta-precio">
+                    <div class="contenido-precio">
+                        <h3>Todos los d&iacute;as</h3>
+                        <p class="numero">$50</p>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Bocadillos Gratis</li>
+                            <li><i class="fa fa-check"></i> Todas las conferencias</li>
+                            <li><i class="fa fa-check"></i> Todos los Talleres</li>
+                        </ul>
+                        <div class="orden">
+                            <label for="pase_completo">Cantidad</label>
+                            <input type="number" id="pase_completo" placeholder="0" min="0" size="3">
+                        </div> <!--orden-->
+                    </div><!--contenido precios-->
+        
+                </div><!--tarjeta precio-->
+        
+                <div class="tarjeta-precio">
+                    <div class="contenido-precio">
+                        <h3>Pase por 2 d&iacute;as</h3>
+                        <p class="numero">$45</p>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Bocadillos Gratis</li>
+                            <li><i class="fa fa-check"></i> Todas las conferencias</li>
+                            <li><i class="fa fa-check"></i> Todos los Talleres</li>
+                        </ul>
+                        <div class="orden">
+                            <label for="pase_2dias">Cantidad</label>
+                            <input type="number" id="pase_2dias" placeholder="0" min="0" size="3">
+                        </div> <!--orden-->
+                    </div><!--contenido precios-->
+                </div><!--tarjeta precio-->
+        
+            </div> <!--lista-precios-->
+            
+        </div> <!--paquetes-->
+            
+        <div class="resumen">
+            <h3>Pagos y Extras</h3>
+            <div class="caja clearfix">
+                <div class="extras">
+                    <div class="orden">
+                        <label for="camisa_evento">Camisas del evento 10$ <small> (promocion 7% dcto)</small></label>
+                        <input type="number" id="camisa_evento"  min="0" placeholder="0">
+                    </div>
+                    <div class="orden">
+                        <label for="etiquetas">Paquete de etiquetas por 2$ <small> (HTML, CSS, Javascript)</small></label>                        </label>
+                        <input type="number" id="etiquetas" size="3" min="0" placeholder="0">
+                    </div>
+                    <div class="orden">
+                        <label for="regalo">Seleccione un regalo</label>
+                        <select required name="regalo" id="regalo">
+                            <option value="">Seleccione</option>
+                            <option value="ETI">Etiqueta</option>
+                            <option value="PUL">Pulsera</option>
+                            <option value="PLU">Pluma</option>
+                        </select>
+                    </div>
+
+                    <input type="button" value="calcular" class="button" id="calcular">
+                </div> <!--extras-->
+
+                <div class="total">
+                    <p>Resumen:</p>
+                    <div id="lista-productos"></div>
+
+                    <p>Total:</p>
+                    <div id="suma-total"></div>
+
+                    <input type="submit" id="btnRegistro" class="button" value="Pagar">
+                </div>
+            </div>
+        </div>
+
+    </form>
+  </section>
+
+
+
+  <footer class="site-footer">
+    <div class="contenedor clearfix">
+      <div class="footer-informacion">
+        <h3>Sobre <span>gdlwebcamp</span></h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima nobis ab illum velit sapiente eius vero quasi dolores libero temporibus doloremque earum aliquam nam, corporis aspernatur laborum cumque tempore delectus.</p>
+      </div>
+
+      <div class="ultimos-tweets">
+        <h3>&Uacute;ltimos <span>tweets</span></h3>
+        <ul>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
+        </ul>
+      </div>
+
+      <div class="menu">
+        <h3>Redes <span>Sociales</span></h3>
+        <nav class="redes-sociales">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </nav>
+      </div>
+    </div>
+    <p class="copy">
+      Todos los derechoas reservados GDLWEBCAMP 2016 &copy;
+    </p>
+  </footer>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

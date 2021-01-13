@@ -776,6 +776,85 @@ footer.site-footer p.copy {
   margin: 0;
 }
 
+/*** INTERNAS ***/
+
+/* formulario de registro*/
+
+form.registro div.caja{
+  background-color: white;
+  padding: 10px;
+  margin:  0 0 20px 0;
+  border:1px solid #e1e1e1; 
+  text-align: center;
+}
+@media only screen and (min-width: 768px){
+  form.registro div.caja {
+    text-align: left;
+    
+  }
+}
+
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+}
+
+form.registro label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+div.campo{
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 768px){
+  div.campo{
+    float: left;
+    width: 33.3%
+  }
+}
+
+div.paquetes .contenido-precio:hover{
+  box-shadow: none;
+  transform: none;
+}
+
+div.orden input {
+  width: 70px;
+}
+
+div.paquetes div.orden label{
+  text-align: center;
+  display: block;
+  margin:0;
+}
+
+
+div.resumen .button {
+  margin: 10px auto;
+  display: block;
+}
+div.orden,
+div.total {
+  margin: 30px 0;
+}
+
+@media only screen and (min-width: 768px){
+
+  div.extras {
+    float:left;
+    width: 50%;
+  }
+  div.total {
+    float:left;
+    width: 50%;
+  }
+}
+
 /******  utiles *******/
 
 /******************************
