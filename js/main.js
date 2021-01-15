@@ -4,7 +4,7 @@
     document.addEventListener('DOMContentLoaded', function(){
         
 
-        var nombrel = document.getElementById('nombre');
+        var nombre = document.getElementById('nombre');
 
         //datos de usuario
         var apellido = document.getElementById('apellido');
@@ -27,7 +27,27 @@
         var etiquetas = document.getElementById('etiquetas'); 
 
 
-        calcular.addEventListener('click', calcularTotal)
+        calcular.addEventListener('click', calcularTotal);
+
+        nombre.addEventListener('blur', validar);
+        apellido.addEventListener('blur', validar);
+        email.addEventListener('blur', validar);
+
+        function validar(){
+             
+            if(!this.value){
+                errorDiv.style.color= 'red';
+                errorDiv.innerHTML='<p>Hay campos vacios, por favor ingrese los datos solicitados</p>';
+                errorDiv.style.maxHeight='30px';
+                this.parentNode.style.borderLeft= '2px solid red';
+                vacio = false;
+            }else{
+                this.parentNode.style.borderLeftColor= 'transparent';
+                if(nombre.value && apellido.value && email.value){
+                    errorDiv.style.maxHeight='0px';
+                }
+            }
+        }
 
         function calcularTotal (event){
             event.preventDefault();
@@ -43,20 +63,22 @@
                 
                 let total = (c2Dias * 45) + (cComp * 50) + (cDia * 30) + (cetiq * 2) + (ccam * 9.3);
                 total = total.toFixed(2); //limita los decimales a 2
-                console.log(total);
+                //console.log(total);
 
                 let resumen = [];
-                if(ccam) resumen.push(` - ${ccam} Camisa(s)`);
-                if(cetiq) resumen.push(` - ${cetiq} Etiqueta(s)`);
-                if(c2Dias) resumen.push(` - ${c2Dias} Pase(s) por dos dias`);
-                if(cComp) resumen.push(` - ${cComp} Pase(s) completo`);
-                if(cDia) resumen.push(` - ${cDia} Paquete(s) de etiquetas`);
+                if(ccam) resumen.push(` ${ccam} Camisa(s)`);
+                if(cetiq) resumen.push(`  ${cetiq} Etiqueta(s)`);
+                if(c2Dias) resumen.push(` ${c2Dias} Pase(s) por dos dias`);
+                if(cComp) resumen.push(` ${cComp} Pase(s) completo`);
+                if(cDia) resumen.push(` ${cDia} Paquete(s) de etiquetas`);
 
                 let lista = document.createElement('ul');
 
                 resumen.forEach( e => {
                     let li = document.createElement('li');
-                    lista.appendChild(li).appendChild(document.createTextNode(e));
+                    lista.appendChild(li).append(document.querySelector('i.fa.fa-check').cloneNode(), document.createTextNode(e));
+                    lista.style.padding= '20px';
+                    lista.style.backgroundColor = 'whitesmoke';
                 })
                 
                 let pResult = document.createElement('p');
@@ -71,6 +93,6 @@
 
         }
         
-        console.log(document.createTextNode('soy un nodo de texto'));
+        //console.log(document.createTextNode('soy un nodo de texto'));
     } );
 })();

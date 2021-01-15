@@ -807,15 +807,22 @@ form.registro label {
   margin-bottom: 5px;
 }
 
+form.registro input {
+  padding: 5px ;
+}
 
 div.campo{
-  padding-bottom: 20px;
+  padding-left:10px;
+  margin-bottom: 20px;
+  transition: all .5s ease-in-out;
+  border-left: 2px solid transparent;
+}div.campo:hover{
+  border-left-color: yellowgreen;
 }
 @media only screen and (min-width: 768px){
   div.campo{
     float: left;
-    width: 33.3%
-  }
+    width: 33.3%;
 }
 
 div.paquetes .contenido-precio:hover{
@@ -853,6 +860,27 @@ div.total {
     float:left;
     width: 50%;
   }
+}
+
+div#lista-productos i {
+  color: green;
+}
+
+div#suma-total p.numero {
+  font-size: 2em;
+}
+
+div#error {
+  clear : both;
+  transition: all .5s ease-in-out;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+}
+div#error *{
+  font-size: .8em;
+  margin:0;
+
 }
 
 /******  utiles *******/
