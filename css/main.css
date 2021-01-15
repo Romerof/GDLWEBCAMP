@@ -823,7 +823,10 @@ div.campo{
   div.campo{
     float: left;
     width: 33.3%;
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4270002aeff4cbfd9076ac35475b02e519d9bb6c
 }
 
 div.paquetes .contenido-precio:hover{
