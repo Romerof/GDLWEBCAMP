@@ -32,7 +32,6 @@
         nombre.addEventListener('blur', validar);
         apellido.addEventListener('blur', validar);
         email.addEventListener('blur', validar);
-<<<<<<< HEAD
         email.addEventListener('blur', validarEmail);
 
         function validarEmail(){
@@ -40,9 +39,6 @@
                 this.parentNode.style.borderLeft= '2px solid red';
             }
         }
-=======
-
->>>>>>> 4270002aeff4cbfd9076ac35475b02e519d9bb6c
         function validar(){
              
             if(!this.value){
@@ -54,11 +50,8 @@
             }else{
                 this.parentNode.style.borderLeftColor= 'transparent';
                 if(nombre.value && apellido.value && email.value){
-<<<<<<< HEAD
+
                     errorDiv.style.maxHeight='';
-=======
-                    errorDiv.style.maxHeight='0px';
->>>>>>> 4270002aeff4cbfd9076ac35475b02e519d9bb6c
                 }
             }
         }
