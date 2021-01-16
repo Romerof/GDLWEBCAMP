@@ -4,6 +4,19 @@
     document.addEventListener('DOMContentLoaded', function(){
         
 
+        //mapa 
+        var mymap = L.map('mapa').setView([8.305265, -62.709961], 12);
+        var marker = L.marker([8.305265, -62.709961]).addTo(mymap);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1Ijoicm9tZXJvZiIsImEiOiJja2p5eWZlZHIwMmNzMm9wNWkzOXgxYWl5In0.PYzBliDnmQj5tMDBfL6EIg'
+        }).addTo(mymap);
+
+
         var nombre = document.getElementById('nombre');
 
         //datos de usuario
