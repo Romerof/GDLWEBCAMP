@@ -118,10 +118,13 @@
 })();
 
 $(function() {
-    
+
     //modifica el nombre del sitio
-    console.log($('.nombre-sitio'));
     $('.nombre-sitio').lettering();
+    
+    //animacion para el nombre del sitio
+    $('.nombre-sitio').hover(
+        function(){$(this).removeClass('animate')}, function(){$(this).addClass('animate')});
 
 
     //programacion de eventos
