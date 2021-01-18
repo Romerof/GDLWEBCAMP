@@ -191,6 +191,10 @@ body {
 
 }
 
+.ocultar {
+  display: none;
+}
+
 /* header */
 
 div.hero{

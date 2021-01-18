@@ -5,7 +5,7 @@
         
 
         //mapa 
-        var mymap = L.map('mapa').setView([8.305265, -62.709961], 12);
+        var mymap = L.map('mapa',{scrollWheelZoom:false}).setView([8.305265, -62.709961], 12);
         var marker = L.marker([8.305265, -62.709961]).addTo(mymap);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -116,3 +116,17 @@
         //console.log(document.createTextNode('soy un nodo de texto'));
     } );
 })();
+
+//programacion de eventos
+$(function() {
+    $('programa-evento nav a').on('click',changeTab);
+    function chageTab(){
+        $('ct-active').removeClass('ct-active')
+        
+        $(this).addClass('ct-active');
+        
+        $('ocultar').hide();
+        $(a.attr('href')).fadeIn();
+    }
+
+})
