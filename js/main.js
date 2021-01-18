@@ -117,16 +117,42 @@
     } );
 })();
 
-//programacion de eventos
 $(function() {
-    $('programa-evento nav a').on('click',changeTab);
-    function chageTab(){
-        $('ct-active').removeClass('ct-active')
+    
+    //modifica el nombre del sitio
+    console.log($('.nombre-sitio'));
+    $('.nombre-sitio').lettering();
+
+
+    //programacion de eventos
+    $('nav.menu-programa a').on('click', function(){
+        $('nav.menu-programa a.activo').removeClass('activo');
+
+        aActive=$(this);
+        aActive.addClass('activo');
         
-        $(this).addClass('ct-active');
-        
-        $('ocultar').hide();
-        $(a.attr('href')).fadeIn();
-    }
+        info=$(aActive.attr('href'));
+        $('.ocultar.fade').hide().removeClass('fade');
+        info.fadeIn().addClass('fade');
+        return false;
+    });
+    $('nav.menu-programa a:first').trigger('click');
+
+    //animacion de los numeros del resumen
+    $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1500);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 1500);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1500);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({number: 9}, 1500);
+
+
+    //animacion de cuenta regresiva
+    $('.cuenta-regresiva').countdown('2021/03/09 00:00:00', function(e){
+        $('#dias').html(e.strftime('%D'));
+        $('#horas').html(e.strftime('%H'));
+        $('#minutos').html(e.strftime('%M'));
+        $('#segundos').html(e.strftime('%S'));
+    })
 
 })
+
+

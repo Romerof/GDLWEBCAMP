@@ -405,8 +405,7 @@ div.programa-evento {
 
 nav.menu-programa {
   width: 100%;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #fe4918;
+  border-bottom: 2px solid #fe4918;
 } 
 nav.menu-programa a {
   text-decoration: none;
@@ -414,8 +413,10 @@ nav.menu-programa a {
   display: block;
   text-align: center;
   font-size: 1.4em;
-  margin-bottom: 10px;
+  padding-bottom: 25px;
   font-family: 'oswald', sans-serif;
+  position: relative;
+  transition: all .3s ease;
 }
 nav.menu-programa a i,
 .detalle-evento p i{
@@ -424,13 +425,46 @@ nav.menu-programa a i,
   font-size: 1.6em;
 }
 
+nav.menu-programa a:not(.activo) {
+  transform: scale(.9);
+  
+}
+nav.menu-programa a.activo {
+  transform: scale(1.2);
+  
+}
+
+nav.menu-programa a span.flecha{
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+
 @media only screen and (min-width: 768px){
   nav.menu-programa {
     display: table;
   }
+  
+  
   nav.menu-programa a {
     display: table-cell;
+    transform:unset !important;
   }
+  nav.menu-programa a span.flecha {
+    color:#fe4918;
+    font-size: 30px;
+    position:absolute;
+    bottom: -19px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  nav.menu-programa a.activo span.flecha{
+    opacity: 100;
+  }
+  
 }
 
 .detalle-evento {
