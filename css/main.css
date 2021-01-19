@@ -103,10 +103,6 @@ html {
   .contenedor {
     width: 95%;
   }
-} @media (min-width: 768px ) {
-  .contenedor {
-    width: 90%;
-  }
 } @media (min-width: 992px ) {
   .contenedor {
     max-width: 1100px; 
@@ -311,17 +307,31 @@ p.slogan {
 
 div.barra {
   background-color: #353535;
-  padding: 20px 0;
+  padding:10px 0;
+  width: 100%;
 } 
 
-div.logo {
-  width: 80%;
-  display: inline-block;
-} @media (min-width: 768px) {
-  div.logo {
-    width: 33%;
-  }
+/* este elemento matiene el espacio de la barra cuando de fija en el borde superior*/
+div.base-barra{
+  width:100%;
+  min-height: 80px;
 }
+
+div.logo {
+  width: 200px;
+  float: left;
+  margin-top: 9px;
+
+} @media (min-width: 480px) {
+    div.logo {
+      width: 280px;
+      margin-top: 3px;
+    }
+  }@media (min-width: 768px) {
+    div.logo {
+      max-width: 30%;
+    }
+  }
 
  /************/
  /** fixed ***/
@@ -333,35 +343,43 @@ div.logo {
   z-index: 99999;
 }
 
-
 /* navegacion */
 
 nav.navegacion-principal {
+  float:left;
   display: none;
+  width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid #fe4a186e;
 } @media (min-width: 768px) {
   nav.navegacion-principal {
-    display: block;
+    border:none;
+    width: 66%;
+    display: block !important;
     float: right;
+    text-align: right;
+    margin:0;
   }
 }
 
+ /* links */
 nav.navegacion-principal a {
-  color: white;
-  text-decoration: none;
   font-family: 'Oswald', sans-serif;
+  color: white;
+  display: block;
+  text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   font-size: 20px;
-  padding: .3em;
-  margin: 0 px 0 0;
-  display: inline-block;
+  padding: 3px 6px;
   border-radius: 3px;
   transition: all .3s ease;
-  display: block;
-  text-align: center;
+
 }nav.navegacion-principal a:last-child {
   margin: 0;
   color: #fe4918;
   border: 1px solid #fe4918;
+
 }
 nav.navegacion-principal a:hover {
   background-color: #fe4918;
@@ -372,7 +390,7 @@ nav.navegacion-principal a:last-child:hover{
 
 @media only screen and (min-width: 768px){
   nav.navegacion-principal a {
-    display: inline-block;
+     display: inline-block;
   }
 
 }
@@ -389,30 +407,72 @@ nav.navegacion-principal a:last-child:hover{
   border-bottom: 2px solid #fe4918;
 }
 
+
+
+
 /*****************************************************
 
   menu movil
 
 *****************************************************/
 
+
+/*boton normal*/
 div.menu-movil {
-  display: block;
+  height: 50px;
   width: 50px;
-  margin: auto 5px;
   float: right;
+  border-radius: 50%;
+  transition: background-color .5s ease;
+  padding-left:  10px;
+  padding-top:  14px;
+  border: 2px solid #ffffff17;
 }
-
-@media (min-width: 768px) {
-  div.menu-movil {
-    display: none;
+  @media (min-width: 768px) {
+    div.menu-movil {
+      display: none;
+    }
   }
+
+/*barras del icono (normal)*/
+div.menu-movil span {
+  height: 2px;
+  width: 26px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: block;
+  background-color:#fe4a1891;
+  transition: all .8s ease;
+}div.menu-movil span:last-of-type{
+  margin:0;
 }
 
-div.menu-movil span {
-  display: block;
-  background-color: white;
-  height: 8px;
-  margin-bottom: 6px;
+
+/*boton (modo quit)*/
+
+div.menu-movil.quit {
+  background-color: #fe4a1891;
+  border-color: #353535;
+  position:relative;
+}
+
+
+/*barras del icono (quit)*/
+
+div.menu-movil.quit span{
+  background-color: #353535;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+div.menu-movil.quit span:nth-child(1){
+  transform: rotate(45deg);
+}
+div.menu-movil.quit span:nth-child(2){
+  opacity: 0;
+}
+div.menu-movil.quit span:nth-child(3){
+  transform: rotate(-45deg);
 }
 
 
@@ -485,8 +545,7 @@ nav.menu-programa a:not(.activo) {
   
 }
 nav.menu-programa a.activo {
-  transform: scale(1.2);
-  
+  font-size: 1.8em;
 }
 
 nav.menu-programa a span.flecha{
@@ -503,7 +562,6 @@ nav.menu-programa a span.flecha{
   
   nav.menu-programa a {
     display: table-cell;
-    transform:unset !important;
   }
   nav.menu-programa a span.flecha {
     color:#fe4918;

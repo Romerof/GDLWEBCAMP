@@ -119,12 +119,17 @@
 $(function() {
 
     //modifica el nombre del sitio
-    $('.nombre-sitio').lettering();
-    
+    $('.nombre-sitio').lettering()
     //animacion para el nombre del sitio
     $('.nombre-sitio').hover(
         function(){$(this).removeClass('animate')}, function(){$(this).addClass('animate')});
 
+
+    // menu hamburguesa desplegable
+    $('.menu-movil').on("click", function(){
+        $('.navegacion-principal').slideToggle();
+        $('.menu-movil').toggleClass('quit');
+    })
 
     //programacion de eventos
     $('nav.menu-programa a').on('click', function(){
@@ -158,23 +163,26 @@ $(function() {
 
     // posicionar la barra
     var barraFixFlag=false;
+    var tope=document.getElementById('barra').offsetTop;
     $(window).scroll((function(){
         //$('#auditor').text(scrollY);
-        if(scrollY >= innerHeight){
+        //if(scrollY >= innerHeight){
+            /*decidi usar <.barra>.offsetTop ya que en el movil "al parecer" la propiedad innerHeight del dispositivo no ocupa el viwport del navegador, osea o es mas grande o mas pequeña, es genera algunos detalles que no me gustan al posicionar la barra en modo fijo*/
+        if(scrollY >= tope){
             if(!barraFixFlag){
                 let barra = $('.barra');
                 barra.addClass('fixed');
-                $('body').css({'margin-top':barra.innerHeight()+'px'});
                 barraFixFlag=true;
             }
         }else{
             if(barraFixFlag){
                 $('.barra').removeClass('fixed');
-                $('body').css({'margin-top':''});
                 barraFixFlag=false;
             }
         }
     }));
+
+    
 })
 
 
