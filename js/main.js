@@ -63,7 +63,6 @@
             }else{
                 this.parentNode.style.borderLeftColor= 'transparent';
                 if(nombre.value && apellido.value && email.value){
-
                     errorDiv.style.maxHeight='';
                 }
             }
@@ -156,6 +155,26 @@ $(function() {
         $('#segundos').html(e.strftime('%S'));
     })
 
+
+    // posicionar la barra
+    var barraFixFlag=false;
+    $(window).scroll((function(){
+        //$('#auditor').text(scrollY);
+        if(scrollY >= innerHeight){
+            if(!barraFixFlag){
+                let barra = $('.barra');
+                barra.addClass('fixed');
+                $('body').css({'margin-top':barra.innerHeight()+'px'});
+                barraFixFlag=true;
+            }
+        }else{
+            if(barraFixFlag){
+                $('.barra').removeClass('fixed');
+                $('body').css({'margin-top':''});
+                barraFixFlag=false;
+            }
+        }
+    }));
 })
 
 
