@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/fontawesome.css">
-  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -51,29 +51,32 @@
     </div> <!--hero-->
   </header>
 
-  <div class="barra">
-    <div class="contenedor clearfix">
-      <div class="logo">
+  <div class="base-barra">
+    <div class="barra" id="barra">
+      <div class="contenedor clearfix">
+        
+        <div class="logo">
           <a href="index.html">
-              <img src="img/logo.svg" alt="Site Logo">
+            <img src="img/logo.svg" alt="Site Logo">
           </a>
-      </div>
+        </div>
+    
+        <div class="menu-movil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    
+        <nav class="navegacion-principal">
+          <a href="conferencia.html">Conferencia</a>
+          <a href="#">Invitados</a>
+          <a href="#">Calendario</a>
+          <a href="#">Reservaciones</a>
+        </nav>
   
-      <div class="menu-movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-  
-      <nav class="navegacion-principal">
-        <a href="conferencia.html">Conferencia</a>
-        <a href="#">Invitados</a>
-        <a href="#">Calendario</a>
-        <a href="#">Reservasiones</a>
-      </nav>
-
-    </div> <!--contenedor-->
-  </div>
+      </div> <!--contenedor-->
+    </div>
+  </div><!--base-barra-->
 
 
   <section class="seccion contenedor">
@@ -97,7 +100,7 @@
         </div><!--datos_usuarios-->
 
         <div id="paquetes" class="paquetes">
-            <h3>Elige el numero de boletos</h3>
+            <h3>Elige el n&uacute;mero de boletos</h3>
 
             <div class="lista-precios clearfix">
                 <div class="tarjeta-precio">
@@ -223,7 +226,7 @@
       </div>
     </div>
     <p class="copy">
-      Todos los derechoas reservados GDLWEBCAMP 2016 &copy;
+      Todos los derechos reservados GDLWEBCAMP 2021 &copy;
     </p>
   </footer>
 
@@ -233,9 +236,6 @@
   <script src="js/vendor/jquery.animateNumber.min.js"></script>
   <script src="js/vendor/jquery.lettering.js "></script>
   <script src="js/vendor/jquery.countdown.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   

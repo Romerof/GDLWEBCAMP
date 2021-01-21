@@ -268,13 +268,8 @@ h1.nombre-sitio {
     h1.nombre-sitio {
       margin:0;
     }
-    div.informacion-evento p.slogan {
-      margin:0;
-      font-size: 25px;
-    }
-
     /* mejora visual del titulo -lettering- */
-    h1.nombre-sitio span{ position: relative;display: inline-block;transition: all .7s ease;}
+    h1.nombre-sitio span{ position: relative;display: inline-block;transition: all .4s;}
     h1.nombre-sitio.animate span.char1 {top: 5px;left:5px;transform: rotate(0deg);}
     h1.nombre-sitio.animate span.char2 {top: -8px;left:3px;transform: rotate(8deg);}
     h1.nombre-sitio.animate span.char3 {top: 10px;left:0px;transform: rotate(-7deg);}
@@ -297,7 +292,7 @@ p.slogan {
   @media (min-width: 780px) {
     div.informacion-evento p.slogan {
       margin:0;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 
@@ -402,10 +397,6 @@ nav.navegacion-principal a:last-child:hover{
 }
 
 
-/**** activo ****/
-.activo {
-  border-bottom: 2px solid #fe4918;
-}
 
 
 
@@ -423,10 +414,9 @@ div.menu-movil {
   width: 50px;
   float: right;
   border-radius: 50%;
-  transition: background-color .5s ease;
-  padding-left:  10px;
-  padding-top:  14px;
-  border: 2px solid #ffffff17;
+  transition: all .4s;
+  border: 1px solid #454545;
+  position: relative;
 }
   @media (min-width: 768px) {
     div.menu-movil {
@@ -436,23 +426,34 @@ div.menu-movil {
 
 /*barras del icono (normal)*/
 div.menu-movil span {
-  height: 2px;
-  width: 26px;
-  margin-bottom: 6px;
-  border-radius: 3px;
+  height: 4%;
+  width: 54%;
+  left: 24%; /* center= 100% - 52% */
+  top: 48%;
+  border-radius: 10px;
   display: block;
-  background-color:#fe4a1891;
-  transition: all .8s ease;
-}div.menu-movil span:last-of-type{
-  margin:0;
+  background-color:#fe4a18;
+  transition: all .4s;;
+  position: absolute;
 }
 
+
+/*boton modo burguer*/
+div.menu-movil span:nth-child(1){
+  top: 30% /* 50% (posicion) + 4% (la altura) = 44%  -  14% (la distancia entre una  barra y otra)*/
+}
+div.menu-movil span:nth-child(2){
+  opacity: 90;
+}
+div.menu-movil span:nth-child(3){
+  top: 64% /* 50% (posicion central) + 14% */
+}
 
 /*boton (modo quit)*/
 
 div.menu-movil.quit {
-  background-color: #fe4a1891;
-  border-color: #353535;
+  background-color: #fe4a18;
+  border-color:transparent;
   position:relative;
 }
 
@@ -463,6 +464,7 @@ div.menu-movil.quit span{
   background-color: #353535;
   position: absolute;
   top: calc(50% - 1px);
+
 }
 
 div.menu-movil.quit span:nth-child(1){
@@ -520,19 +522,22 @@ div.programa-evento {
 
 nav.menu-programa {
   width: 100%;
-  border-bottom: 2px solid #fe4918;
+  border-bottom: 1px solid #fe4918;
 } 
+
 nav.menu-programa a {
   text-decoration: none;
   color: #000;
   display: block;
   text-align: center;
   font-size: 1.4em;
-  padding-bottom: 25px;
+  padding: 10px 0;
   font-family: 'oswald', sans-serif;
   position: relative;
   transition: all .3s ease;
+
 }
+
 nav.menu-programa a i,
 .detalle-evento p i{
   color: #fe4918;
@@ -540,44 +545,47 @@ nav.menu-programa a i,
   font-size: 1.6em;
 }
 
-nav.menu-programa a:not(.activo) {
-  transform: scale(.9);
-  
-}
-nav.menu-programa a.activo {
-  font-size: 1.8em;
-}
 
 nav.menu-programa a span.flecha{
   opacity: 0;
   transition: all .3s ease;
 }
 
+nav.menu-programa a span.flecha {
+  color:#fe4918;
+  font-size: 30px;
+  position:absolute;
+  top: 30%;
+  left: 0;
+  transform: rotate(-90deg);
+  
+}
+
+nav.menu-programa a.activo span.flecha{
+  opacity: 100;
+}
 
 @media only screen and (min-width: 768px){
   nav.menu-programa {
     display: table;
   }
-  
-  
   nav.menu-programa a {
     display: table-cell;
   }
+
   nav.menu-programa a span.flecha {
-    color:#fe4918;
-    font-size: 30px;
+    top: 81%;
+    left: 44%;
+    transform: unset;
+  }
+
+  nav.menu-programa a span.flecha::after {
+    content: "\f0d7";
+    color:#fff;
     position:absolute;
-    bottom: -19px;
+    top: -2px;
     left: 0;
-    width: 100%;
-    text-align: center;
-
   }
-
-  nav.menu-programa a.activo span.flecha{
-    opacity: 100;
-  }
-  
 }
 
 .detalle-evento {
