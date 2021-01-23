@@ -149,13 +149,14 @@ $(function() {
 
     //animacion de los numeros del resumen
     $('.resumen-evento').waypoint(function(dir){
-        console.log("aqui se dispara: " + dir);
-        $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1500);
-        $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 1500);
-        $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1500);
-        $('.resumen-evento li:nth-child(4) p').animateNumber({number: 9}, 1500);
+        if(dir=='down'){
+            $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1600);
+            $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 2100);
+            $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1400);
+            $('.resumen-evento li:nth-child(4) p').animateNumber({number: 9}, 1800);
+        }
     },{
-        offset: 80
+        offset: '80%',
     });
 
 
