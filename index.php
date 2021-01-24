@@ -30,55 +30,11 @@
 
 <body>
 
+<!-- site-header  -->
+<?php  include_once("includes/templates/header.php")?>
+<!-- site-header  -->
 
 
-  <header>
-    <div class="hero">
-      <div class="contenedor-header">
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-        <div class="informacion-evento">
-          <div class="clearfix">
-            <p class="fecha"><i class="far fa-calendar-alt"></i> 10-12 Dic</p>
-            <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Ciudad Guayana, VE</p>
-          </div>
-          <h1 class="nombre-sitio animate">GdlWebCamp</h1>
-          <p class="slogan">La mejor conferencia de <span>diseño web</span></p>
-        </div>
-      </div> <!--contenido-header-->
-    </div> <!--hero-->
-  </header>
-  <div class="base-barra">
-    <div class="barra" id="barra">
-      <div class="contenedor clearfix">
-        
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/logo.svg" alt="Site Logo">
-          </a>
-        </div>
-    
-        <div class="menu-movil">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-    
-        <nav class="navegacion-principal">
-          <a href="conferencia.html">Conferencia</a>
-          <a href="#">Invitados</a>
-          <a href="#">Calendario</a>
-          <a href="#">Reservaciones</a>
-        </nav>
-  
-      </div> <!--contenedor-->
-    </div>
-  </div><!--base-barra-->
 
   <!--<p id='auditor'>auditor</p>-->
   <section class="seccion contenedor">
@@ -156,7 +112,7 @@
     </div>
   </section> <!-- porgrama -->
 
-  
+
   <section class="invitados contenedor seccion">
     <h2>Nuestros Invitados</h2>
     <ul class="lista-invitados clearfix">
@@ -281,7 +237,7 @@
   </section>
 
   <div id="mapa" class="mapa">
-    
+
   </div>
 
   <section class="seccion">
@@ -297,7 +253,7 @@
           </footer>
         </blockquote>
       </div> <!-- testimonial-->
-  
+
       <div class="testimonial">
         <blockquote>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta veritatis eius quasi ducimus, aliquam nostrum corrupti. Officiis cum quo dolore cupiditate corporis veniam nobis id incidunt in. Magnam, animi eligendi.</p>
@@ -307,7 +263,7 @@
           </footer>
         </blockquote>
       </div> <!-- testimonial-->
-  
+
       <div class="testimonial">
         <blockquote>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta veritatis eius quasi ducimus, aliquam nostrum corrupti. Officiis cum quo dolore cupiditate corporis veniam nobis id incidunt in. Magnam, animi eligendi.</p>
@@ -354,38 +310,10 @@
     </div>
   </section>
 
-
-  <footer class="site-footer">
-    <div class="contenedor clearfix">
-      <div class="footer-informacion">
-        <h3>Sobre <span>gdlwebcamp</span></h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima nobis ab illum velit sapiente eius vero quasi dolores libero temporibus doloremque earum aliquam nam, corporis aspernatur laborum cumque tempore delectus.</p>
-      </div>
-
-      <div class="ultimos-tweets">
-        <h3>&Uacute;ltimos <span>tweets</span></h3>
-        <ul>
-          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
-          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
-          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic autem quos corrupti, dignissimos possimus quas?</li>
-        </ul>
-      </div>
-
-      <div class="menu">
-        <h3>Redes <span>Sociales</span></h3>
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-      </div>
-    </div>
-    <p class="copy">
-      Todos los derechas reservados GDLWEBCAMP 2020 &copy;
-    </p>
-  </footer>
+  <!-- site-footer  -->
+  <?php include_once("includes/templates/footer.php") ?>
+  <!-- site-footer  -->
+  
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/vendor/jquery.min.js"></script>
