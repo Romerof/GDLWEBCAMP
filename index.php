@@ -50,64 +50,62 @@
         <source src="video/video.ogv" type="video/ogg">
       </video>
     </div>
-    <div class="contenedor-programa">
-      <div class="contenedor">
-        <div class="programa-evento">
-          <h2>Programa del Evento</h2>
-          <nav class="menu-programa">
-            <a href="#talleres"><i class="fa fa-code" aria-hidden="true"></i>Talleres<span class="fas fa-caret-down flecha"></span></a>
-            <a href="#conferencias"><i class="fa fa-comment" aria-hidden="true"></i> Conferencias <span class="fas fa-caret-down flecha"></span></a>
-            <a href="#seminarios"><i class="fa fa-university" aria-hidden="true"></i> Seminarios <span class="fas fa-caret-down flecha"></span></a>
-          </nav>
+    <div class="contenedor-programa contenedor">
+      <div class="programa-evento">
+        <h2>Programa del Evento</h2>
+        <nav class="menu-programa">
+          <a href="#talleres"><i class="fa fa-code" aria-hidden="true"></i>Talleres<span class="fas fa-caret-down flecha"></span></a>
+          <a href="#conferencias"><i class="fa fa-comment" aria-hidden="true"></i> Conferencias <span class="fas fa-caret-down flecha"></span></a>
+          <a href="#seminarios"><i class="fa fa-university" aria-hidden="true"></i> Seminarios <span class="fas fa-caret-down flecha"></span></a>
+        </nav>
 
-          <div id="talleres" class="info-curso ocultar clearfix">
-            <div class="detalle-evento">
-              <h3>HTML, CSS3 y Javascript</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Juan Pablo de la Torre</p>
-            </div>
-            <div class="detalle-evento">
-              <h3>Responsive Web Desing</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 20:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Juan Pablo de la Torre</p>
-            </div>
-            <a class="button float-right" href="#">Ver todos</a>
-          </div> <!--info-curso-->
+        <div id="talleres" class="info-curso ocultar clearfix">
+          <div class="detalle-evento">
+            <h3>HTML, CSS3 y Javascript</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Juan Pablo de la Torre</p>
+          </div>
+          <div class="detalle-evento">
+            <h3>Responsive Web Desing</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 20:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Juan Pablo de la Torre</p>
+          </div>
+          <a class="button float-right" href="#">Ver todos</a>
+        </div> <!--info-curso-->
 
-          <div id="conferencias" class="info-curso ocultar clearfix">
-            <div class="detalle-evento">
-              <h3>Como ser freelance</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Gregorio Sanchez</p>
-            </div>
-            <div class="detalle-evento">
-              <h3>Tecnolog&iacute;as del futuro</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Susan Sanchez</p>
-            </div>
-            <a class="button float-right" href="#">Ver todos</a>
-          </div> <!--info-curso-->
+        <div id="conferencias" class="info-curso ocultar clearfix">
+          <div class="detalle-evento">
+            <h3>Como ser freelance</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Gregorio Sanchez</p>
+          </div>
+          <div class="detalle-evento">
+            <h3>Tecnolog&iacute;as del futuro</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Susan Sanchez</p>
+          </div>
+          <a class="button float-right" href="#">Ver todos</a>
+        </div> <!--info-curso-->
 
-          <div id="seminarios" class="info-curso ocultar clearfix">
-            <div class="detalle-evento">
-              <h3>Diseño IU/UX para m&oacute;viles</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 11 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Harold Garcia</p>
-            </div>
-            <div class="detalle-evento">
-              <h3>Aprende a programar en un d&iacute;a</h3>
-              <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
-              <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
-              <p><i class="fas fa-user" aria-hidden="true"></i> Susana Rivera</p>
-            </div>
-            <a class="button float-right" href="#">Ver todos</a>
-          </div> <!--info-curso-->
-        </div>
+        <div id="seminarios" class="info-curso ocultar clearfix">
+          <div class="detalle-evento">
+            <h3>Diseño IU/UX para m&oacute;viles</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 17:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 11 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Harold Garcia</p>
+          </div>
+          <div class="detalle-evento">
+            <h3>Aprende a programar en un d&iacute;a</h3>
+            <p><i class="far fa-clock" aria-hidden="true"></i> 10:00 hrs</p>
+            <p><i class="far fa-calendar-alt" aria-hidden="true"></i> 10 de Dic</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Susana Rivera</p>
+          </div>
+          <a class="button float-right" href="#">Ver todos</a>
+        </div> <!--info-curso-->
       </div>
     </div>
   </section> <!-- porgrama -->
